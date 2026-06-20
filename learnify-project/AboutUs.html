@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Us | Learnify</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700&amp;family=Work+Sans:wght@400;500&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-container": "#3c6c6e",
+                    "secondary-fixed": "#b9ecee",
+                    "surface-variant": "#dee3e7",
+                    "on-primary-fixed-variant": "#613c46",
+                    "surface-container": "#e9eff2",
+                    "on-primary-fixed": "#30121b",
+                    "inverse-surface": "#2b3134",
+                    "tertiary-container": "#a9b9be",
+                    "on-background": "#171c1f",
+                    "tertiary-fixed-dim": "#b9c9ce",
+                    "on-primary": "#ffffff",
+                    "surface-tint": "#7c535d",
+                    "secondary": "#356668",
+                    "surface-dim": "#d5dbde",
+                    "primary-fixed-dim": "#edb9c4",
+                    "outline": "#827476",
+                    "surface-container-lowest": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-fixed": "#002021",
+                    "surface-bright": "#f5fafe",
+                    "on-tertiary-container": "#3b4a4e",
+                    "on-primary-container": "#623d46",
+                    "error": "#ba1a1a",
+                    "secondary-container": "#b9ecee",
+                    "primary-container": "#dba9b4",
+                    "on-tertiary-fixed": "#0f1e21",
+                    "on-secondary": "#ffffff",
+                    "tertiary-fixed": "#d5e5ea",
+                    "secondary-fixed-dim": "#9ecfd1",
+                    "on-surface-variant": "#504446",
+                    "background": "#f5fafe",
+                    "surface-container-high": "#e3e9ec",
+                    "on-surface": "#171c1f",
+                    "surface-container-highest": "#dee3e7",
+                    "on-secondary-fixed-variant": "#1a4e50",
+                    "inverse-primary": "#edb9c4",
+                    "error-container": "#ffdad6",
+                    "outline-variant": "#d4c2c5",
+                    "tertiary": "#526165",
+                    "primary": "#7c535d",
+                    "on-tertiary-fixed-variant": "#3a494d",
+                    "surface": "#f5fafe",
+                    "on-error": "#ffffff",
+                    "surface-container-low": "#eff4f8",
+                    "inverse-on-surface": "#ecf1f5",
+                    "primary-fixed": "#ffd9e0"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "16px",
+                    "margin-mobile": "16px",
+                    "margin-desktop": "64px",
+                    "unit": "8px",
+                    "container-padding": "24px",
+                    "xxl": "4rem",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "body-md": ["workSans"],
+                    "headline-xl": ["manrope"],
+                    "headline-lg": ["manrope"],
+                    "body-sm": ["workSans"],
+                    "label-md": ["jetbrainsMono"],
+                    "headline-lg-mobile": ["manrope"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-xl": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .tonal-elevation-1 {
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+        }
+        .tonal-elevation-2 {
+            box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.08);
+        }
+        .glass-header {
+            backdrop-filter: blur(12px);
+        }
+        body {
+            background-color: #f5fafe;
+            color: #171c1f;
+            font-family: 'workSans', sans-serif;
+        }
+    </style>
+</head>
+<body class="min-h-screen overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="bg-surface/90 glass-header border-b border-outline-variant sticky top-0 z-50 shadow-sm h-16 flex items-center">
+<div class="flex justify-between items-center w-full px-gutter max-w-container-max mx-auto">
+<div class="flex items-center gap-gutter">
+<span class="font-headline-lg text-2xl font-bold text-primary">Learnify</span>
+<nav class="hidden md:flex gap-gutter ml-8">
+<a class="text-on-surface-variant font-label-md hover:text-primary transition-colors duration-150" href="#">Home</a>
+<a class="text-on-surface-variant font-label-md hover:text-primary transition-colors duration-150" href="#">Courses</a>
+<a class="text-primary font-bold border-b-2 border-primary font-label-md" href="#">About Us</a>
+</nav>
+</div>
+<div class="flex items-center gap-gutter">
+<div class="hidden sm:flex items-center bg-surface-container-low border border-outline-variant rounded-full px-4 py-1 gap-2">
+<span class="material-symbols-outlined text-outline text-lg" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-body-sm w-32 lg:w-48" placeholder="Search courses..." type="text"/>
+</div>
+<div class="flex gap-4">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors" data-icon="notifications">notifications</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors" data-icon="shopping_cart">shopping_cart</button>
+</div>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-outline-variant">
+<img alt="Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkMo72YllqYaPWIDHdbl2_nu0UXT78NP531kzJVtt7BmLAv6BptKQ38_M0gW6dNYM5xEdNukDhi5czYttHwqR9A2rNrEf3oqqcipcupt-FLPNw4Q4xlrmbi1YarWLjbp3ZchpdsKSQBX2kx65gebIvtypWUK4B6zUWOBT7V61ukzjhn67XXDfL3UX6EzvWWX8d7orfpYd68Q9folu9q5zVINlAVzplPtuor1CscgSzDmI0ehKxXlgfwA99nCpj8SUPacjhv-6Xx2E"/>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-container-max mx-auto px-gutter pt-xxl space-y-xxl">
+<!-- Hero Section: Narrative Story -->
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-margin-desktop items-center">
+<div class="space-y-gutter">
+<div class="inline-flex items-center px-4 py-1 bg-secondary-fixed text-on-secondary-fixed-variant rounded-full font-label-md uppercase tracking-wider">
+                OUR JOURNEY
+            </div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface max-md:text-headline-lg-mobile leading-tight">
+                Empowering the next generation of <span class="text-primary">lifelong learners.</span>
+</h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Founded in 2020, Learnify began as a simple idea: that high-quality, professional education should be accessible to anyone, anywhere. What started as a small library of design tutorials has grown into a global ecosystem where students and experts connect to solve real-world challenges.
+            </p>
+<div class="pt-2">
+<button class="bg-primary text-on-primary px-8 py-3 rounded-xl font-label-md hover:scale-105 transition-transform duration-150 shadow-sm">
+                    Join our mission
+                </button>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -inset-4 bg-primary/5 rounded-3xl -z-10 group-hover:bg-primary/10 transition-colors"></div>
+<div class="rounded-3xl overflow-hidden tonal-elevation-1 aspect-video">
+<img class="w-full h-full object-cover" data-alt="Team collaboration" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8VJWwH4P1HapU07nT9k47wYuM3Wg_5zbZosncz4ZaSn-s07xylOMkgWqMNO6DoBa7HeNgbkuO5vJ4FIbQYd0TWq2YIkUbg_SpzmfPr4v1ao323plzavm6SadwhBMsw3I05Nl7NFW02S4I6PXA_yl0fJFSh0jIYXyqIgH8YPIoUm9BRz_7xb21SI7fLpWlubfjAODDie5_L9ZSVXJG5rONT_SSq6-j9Sbora7xGwE8azhzC8cIMqnPFw40kzHCKVXNesBRnsgxR2w"/>
+</div>
+</div>
+</section>
+<!-- Impact Statistics -->
+<section class="bg-surface-container rounded-[2rem] p-gutter md:p-12">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter text-center">
+<div class="space-y-1">
+<span class="font-headline-xl text-headline-xl text-primary block">1M+</span>
+<span class="font-label-md text-on-surface-variant uppercase tracking-wider">Active Students</span>
+</div>
+<div class="space-y-1">
+<span class="font-headline-xl text-headline-xl text-primary block">500+</span>
+<span class="font-label-md text-on-surface-variant uppercase tracking-wider">Expert Mentors</span>
+</div>
+<div class="space-y-1">
+<span class="font-headline-xl text-headline-xl text-primary block">45k+</span>
+<span class="font-label-md text-on-surface-variant uppercase tracking-wider">Courses Completed</span>
+</div>
+<div class="space-y-1">
+<span class="font-headline-xl text-headline-xl text-primary block">120</span>
+<span class="font-label-md text-on-surface-variant uppercase tracking-wider">Countries Reached</span>
+</div>
+</div>
+</section>
+<!-- Mission & Vision Bento Grid -->
+<section class="space-y-12">
+<div class="text-center max-w-2xl mx-auto space-y-4">
+<h2 class="font-headline-lg text-headline-lg">Purpose-driven education</h2>
+<p class="font-body-md text-on-surface-variant">We believe that education is the foundation of progress. Our core values drive every course we build and every feature we release.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Mission Card -->
+<div class="md:col-span-2 bg-surface-container-lowest p-8 md:p-12 rounded-3xl tonal-elevation-1 border border-outline-variant/30 flex flex-col justify-between hover:tonal-elevation-2 transition-all group">
+<div class="space-y-4">
+<div class="w-12 h-12 bg-primary-container rounded-2xl flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined" data-icon="rocket_launch">rocket_launch</span>
+</div>
+<h3 class="font-headline-lg text-2xl">Our Mission</h3>
+<p class="font-body-md text-on-surface-variant leading-relaxed max-w-xl">
+                        To democratize world-class professional training by providing an intuitive platform that removes the barriers between ambitious learners and industry-leading knowledge.
+                    </p>
+</div>
+<div class="mt-8 flex -space-x-3">
+<div class="w-10 h-10 rounded-full border-2 border-surface-container-lowest bg-surface-dim overflow-hidden">
+<img alt="User" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBn5j7VcIj1n2HLa7qdGUbWm09L7GRYJkqTvr77bpe93u6JCLaSmTu7C85if56721Beq6i-ALMaXHwbdVhHpXBgTmZXOxlksDdlXoBfiPQBXru7mutm8M3kXl6hAESSOLpnUt5shZWYeDwz1xkwXdZTVYOLI0wy7UMy3fsrasQeAcxmpb1RCeeuJfFrxtYwxbkHi8H3ScqaHsf7chRTH65Us0-ZzCOaBY-NdzdoqEASTQSmJmh1gPUgzX8jsliVN5rFKIpQ6FJuj9o"/>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-surface-container-lowest bg-surface-dim overflow-hidden">
+<img alt="User" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApLKE3EOdgvQ1Y4HfQnT9O--smFHDSaIoFgAYcZ5Wl-GPf4gKaGcxQvry_4_raHDy0xGVjd70ibAuIzOL7JFRXDPcovlLasKLnUSaPY8Iwj0gg6e2hHD9GRtvxH40cDw0DKnh7A1IF0hZxUPwcAP5tUUg8izZRl-Cim8KtEa01qrM9LFElrel95-Hj2_5rXrNKYaGu1UWNoPGYVbThJ0mr8oa6ZGGifMxNV2DLMhlQ-y5MHPProduMZiHZNA4OspViYwHpuUpsCCA"/>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-surface-container-lowest bg-surface-dim overflow-hidden">
+<img alt="User" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAoeDP4yZAosIoBHpYkxnzAXe_lARoPyJMMP0fUM3Khq5aI0ANg0ffrUtOMzZ-SWt5AGe_VLh2goA_avkDbYp_dvjShA78KyQgLOpamCbQTANyZ-ATkhZlZXDs0T4DVmGDywOKi-PmZVkmuG5s-MxHvuzf8w4VChIy4EmvrZ6YcteBR5llrfyyMDdpD0KdGrN5eM7LN9lQUP-Xrn0MwNqM14-0cjRZwJ1oMmACYpOQzNGGwLQURHT7hGaoIddKxA0nSu3Y-yDu2Sc"/>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-surface-container-lowest bg-primary-container flex items-center justify-center text-on-primary-container font-label-md text-[10px]">
+                        +1k
+                    </div>
+</div>
+</div>
+<!-- Vision Card -->
+<div class="bg-primary p-8 md:p-12 rounded-3xl tonal-elevation-1 flex flex-col justify-between text-on-primary hover:tonal-elevation-2 transition-all">
+<div class="space-y-4">
+<div class="w-12 h-12 bg-on-primary/10 rounded-2xl flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary" data-icon="visibility">visibility</span>
+</div>
+<h3 class="font-headline-lg text-2xl">Our Vision</h3>
+<p class="font-body-md text-on-primary/80 leading-relaxed">
+                        A world where skill acquisition is continuous, personalized, and a source of joy for every professional.
+                    </p>
+</div>
+<div class="mt-8">
+<div class="h-2 w-full bg-on-primary/20 rounded-full overflow-hidden">
+<div class="h-full bg-secondary-fixed-dim rounded-full w-3/4"></div>
+</div>
+<p class="font-label-md mt-2 opacity-70">75% Growth Goal Reached</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Our Team -->
+<section class="space-y-12">
+<div class="flex justify-between items-end gap-gutter border-b border-outline-variant pb-6">
+<div class="space-y-1">
+<h2 class="font-headline-lg text-headline-lg">The minds behind Learnify</h2>
+<p class="font-body-md text-on-surface-variant">A team of educators, designers, and engineers obsessed with learning.</p>
+</div>
+<button class="hidden md:flex items-center gap-2 text-primary font-label-md hover:underline transition-all">
+                View all 42 members
+                <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Team Member 1 -->
+<div class="group">
+<div class="rounded-2xl overflow-hidden tonal-elevation-1 aspect-[4/5] relative mb-4 bg-surface-container-high transition-transform duration-300 group-hover:-translate-y-2">
+<img class="w-full h-full object-cover" data-alt="Sarah Chen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCScFjEjv1Mg4uUjNZMo_R4bB9t-xm2rlHH843JhzC7JOCIMivyVM1rQGjKFBLriw9_OxgUUkCinG_fodsPiAVJ_GOeLb75Da4Y-zE8yXde-Mkay-2dmgt9mGVADU8Fz8oICPSicjoRzkU4So7s03S9jb1NRhJqiW8geprX8jAztjkoG21UrHT6jYftUqmw4genPG-7DhWpmH3SkQ6W_QEQKvUXElzViLRSP_u9yxYpc-YUFfABF3oCvsDkB58ln6C9f2Uc7E3M9xs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+<div class="flex gap-2">
+<a class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center hover:bg-white/40" href="#"><span class="material-symbols-outlined text-white text-sm" data-icon="share">share</span></a>
+<a class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center hover:bg-white/40" href="#"><span class="material-symbols-outlined text-white text-sm" data-icon="mail">mail</span></a>
+</div>
+</div>
+</div>
+<h4 class="font-headline-lg text-lg">Sarah Chen</h4>
+<p class="font-label-md text-primary font-bold">Chief Executive Officer</p>
+<p class="font-body-sm text-on-surface-variant mt-2">Former VP of Learning at Global EdTech. Passionate about AI-driven education.</p>
+</div>
+<!-- Team Member 2 -->
+<div class="group">
+<div class="rounded-2xl overflow-hidden tonal-elevation-1 aspect-[4/5] relative mb-4 bg-surface-container-high transition-transform duration-300 group-hover:-translate-y-2">
+<img class="w-full h-full object-cover" data-alt="David Miller" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBs_MwWEtcClw7LwVkQxC8Uls-JxLEvRxMPsrcgqa69vbrU2qC0ZxE4qixr856uo1qWweqI8BEYEJngvFVkPTyMh5YISVy_DevawrXUFCwPTIN1TrvM1L49RYUuoXAls0P_gX_tVoeo7kyF34leWC8KvR35eES3lZEigZTznkFVz4DYifu1G6CYulg9O9Mn3AMznGf5lngn3tg5wkHRqtn0SvDys14DFvZhpFoBTfuDV7ln2xQ3j1gXAKFwxfzZwHu_ouDHtp2sHKA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+<div class="flex gap-2">
+<a class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center hover:bg-white/40" href="#"><span class="material-symbols-outlined text-white text-sm" data-icon="share">share</span></a>
+<a class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center hover:bg-white/40" href="#"><span class="material-symbols-outlined text-white text-sm" data-icon="mail">mail</span></a>
+</div>
+</div>
+</div>
+<h4 class="font-headline-lg text-lg">David Miller</h4>
+<p class="font-label-md text-primary font-bold">Chief Technology Officer</p>
+<p class="font-body-sm text-on-surface-variant mt-2">Architect of the Learnify Core Engine. Loves scalable distributed systems.</p>
+</div>
+<!-- Team Member 3 -->
+<div class="group">
+<div class="rounded-2xl overflow-hidden tonal-elevation-1 aspect-[4/5] relative mb-4 bg-surface-container-high transition-transform duration-300 group-hover:-translate-y-2">
+<img class="w-full h-full object-cover" data-alt="Aria Rodriguez" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQeqxs1b5aNfhIWMlCOnbGFaIKLgKr82pK2UkM_uhK2GvlaIckGOJkf8-YJfFi3Up1p3ZNvYSdFaTNcMIZRZudLcd2obbiDfMbumP71ZPY5a40Vk9zZpNbPfuuos9ONumDhILs5vlcOYUTjSsjkn1llQEB20htZr27Z7WggVxWKpJJQ-pHR26b5lCofTOYhgWDWoBn7ShyiU3u93hJtQZyKejLG5jR78EPhyWjElg08SzZS57_aGccEJdNvMP_ajupzoYEye8EzWc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+<div class="flex gap-2">
+<a class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center hover:bg-white/40" href="#"><span class="material-symbols-outlined text-white text-sm" data-icon="share">share</span></a>
+<a class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center hover:bg-white/40" href="#"><span class="material-symbols-outlined text-white text-sm" data-icon="mail">mail</span></a>
+</div>
+</div>
+</div>
+<h4 class="font-headline-lg text-lg">Aria Rodriguez</h4>
+<p class="font-label-md text-primary font-bold">Head of Design</p>
+<p class="font-body-sm text-on-surface-variant mt-2">User experience specialist focused on making learning environments delightful.</p>
+</div>
+<!-- Team Member 4 -->
+<div class="group">
+<div class="rounded-2xl overflow-hidden tonal-elevation-1 aspect-[4/5] relative mb-4 bg-surface-container-high transition-transform duration-300 group-hover:-translate-y-2">
+<img class="w-full h-full object-cover" data-alt="James Wilson" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8MrKO6LSKTHPlFBWL1Ft5WKq_KqGJu9JaAuVtNlJIVUMWNCpwsEhxqB9C6MNe1qs-v2MJYxJdje6R5vPJ5sMqwm_3CVRkKBSFunvWdgC28i_VENWfqqeXrGaBS7lQUrGWxPgjwpCPpBgnuaYy-9C4cfLYlWhF4iaLMQITawAZTuinEuuxkhXnSO8U-58Di33tsM_BwPT4IxJ2elpyKgg21qJDu1GnVjai3ZNczx5fe28FkdedzzMtICcVNeN4NQk2Vp7WwVQ-zcA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+<div class="flex gap-2">
+<a class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center hover:bg-white/40" href="#"><span class="material-symbols-outlined text-white text-sm" data-icon="share">share</span></a>
+<a class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center hover:bg-white/40" href="#"><span class="material-symbols-outlined text-white text-sm" data-icon="mail">mail</span></a>
+</div>
+</div>
+</div>
+<h4 class="font-headline-lg text-lg">James Wilson</h4>
+<p class="font-label-md text-primary font-bold">Head of Curriculum</p>
+<p class="font-body-sm text-on-surface-variant mt-2">Curating high-impact knowledge from the world's leading industry experts.</p>
+</div>
+</div>
+</section>
+<!-- Call to Action -->
+<section class="relative bg-inverse-surface rounded-[3rem] overflow-hidden p-12 md:p-24">
+<div class="absolute inset-0 bg-primary/5 pointer-events-none"></div>
+<div class="relative z-10 text-center space-y-6 max-w-3xl mx-auto">
+<h2 class="font-headline-xl text-headline-xl text-on-primary">Ready to start your journey?</h2>
+<p class="font-body-md text-surface-variant">Join over a million students who are already advancing their careers through expert-led courses on Learnify.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center pt-8">
+<button class="bg-primary text-on-primary px-10 py-4 rounded-full font-label-md hover:bg-primary/90 transition-all shadow-lg">Explore Courses</button>
+<button class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-10 py-4 rounded-full font-label-md hover:bg-white/20 transition-all">Contact Sales</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest mt-xxl border-t border-outline-variant">
+<div class="w-full py-12 px-gutter max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 space-y-4">
+<span class="font-headline-lg text-2xl font-bold text-primary">Learnify</span>
+<p class="font-body-sm text-on-surface-variant">Making professional education accessible, engaging, and measurable for learners worldwide.</p>
+<div class="flex gap-4">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined" data-icon="language">language</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined" data-icon="share">share</span></a>
+</div>
+</div>
+<div>
+<h5 class="font-label-md font-bold mb-6 uppercase tracking-tight text-on-surface">Company</h5>
+<ul class="space-y-3">
+<li><a class="font-body-sm text-on-surface-variant hover:text-primary transition-all" href="#">About Us</a></li>
+<li><a class="font-body-sm text-on-surface-variant hover:text-primary transition-all" href="#">Careers</a></li>
+<li><a class="font-body-sm text-on-surface-variant hover:text-primary transition-all" href="#">Press Kit</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-md font-bold mb-6 uppercase tracking-tight text-on-surface">Resources</h5>
+<ul class="space-y-3">
+<li><a class="font-body-sm text-on-surface-variant hover:text-primary transition-all" href="#">Help Center</a></li>
+<li><a class="font-body-sm text-on-surface-variant hover:text-primary transition-all" href="#">Privacy Policy</a></li>
+<li><a class="font-body-sm text-on-surface-variant hover:text-primary transition-all" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-md font-bold mb-6 uppercase tracking-tight text-on-surface">Newsletter</h5>
+<div class="space-y-4">
+<p class="font-body-sm text-on-surface-variant">Stay updated with our latest course drops.</p>
+<div class="flex bg-surface-container-lowest rounded-lg p-1 border border-outline-variant focus-within:ring-2 focus-within:ring-primary/20">
+<input class="bg-transparent border-none focus:ring-0 text-body-sm flex-grow px-3" placeholder="Email address" type="email"/>
+<button class="bg-primary text-on-primary p-2 rounded-md transition-colors hover:bg-primary/90"><span class="material-symbols-outlined text-sm" data-icon="send">send</span></button>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full py-6 px-gutter max-w-container-max mx-auto border-t border-outline-variant/30 text-center">
+<p class="font-label-md text-on-surface-variant opacity-60">© 2024 Learnify Inc. All rights reserved.</p>
+</div>
+</footer>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const stats = document.querySelectorAll('.font-headline-xl');
+        const observerOptions = { threshold: 0.1 };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                }
+            });
+        }, observerOptions);
+
+        stats.forEach(stat => observer.observe(stat));
+    });
+</script>
+</body></html>
