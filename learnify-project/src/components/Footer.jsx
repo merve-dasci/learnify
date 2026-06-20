@@ -1,50 +1,66 @@
+import { BookOpen, Mail, Phone, MapPin } from "lucide-react";
+
 export default function Footer() {
   return (
-    <footer className="bg-surface-container-high border-t border-outline-variant mt-auto">
-      <div className="max-w-[1280px] mx-auto px-6 py-10">
-        <div className="grid md:grid-cols-4 gap-8">
-          <div>
-            <h2 className="text-xl font-bold text-primary">Learnify</h2>
+    <footer className="footer" id="global-footer-section">
+      <div className="container footer-grid">
+        <div className="footer-col">
+          <div className="footer-logo">
+            <div className="footer-logo-badge">
+              <BookOpen style={{ width: "18px", height: "18px" }} />
+            </div>
 
-            <p className="text-sm text-on-surface-variant mt-3">
-              Learn new skills from expert instructors and advance your career.
-            </p>
+            <span className="logo-text">Learnify</span>
           </div>
 
-          <div>
-            <h3 className="font-semibold mb-3">Company</h3>
-
-            <ul className="space-y-2 text-sm">
-              <li>About Us</li>
-              <li>Careers</li>
-              <li>Contact</li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="font-semibold mb-3">Resources</h3>
-
-            <ul className="space-y-2 text-sm">
-              <li>Courses</li>
-              <li>Categories</li>
-              <li>Help Center</li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="font-semibold mb-3">Newsletter</h3>
-
-            <input
-              type="email"
-              placeholder="Email address"
-              className="w-full border border-outline-variant rounded-lg px-3 py-2"
-            />
-          </div>
+          <p className="footer-desc">
+            Learnify, farklı alanlarda online eğitimler sunan sade bir eğitim
+            platformudur.
+          </p>
         </div>
 
-        <div className="border-t border-outline-variant mt-8 pt-4 text-center text-sm text-on-surface-variant">
-          © 2026 Learnify. All rights reserved.
+        <div className="footer-col">
+          <h3 className="footer-title">Kategoriler</h3>
+          <ul className="footer-list">
+            <li>Yazılım</li>
+            <li>Tasarım</li>
+            <li>Kişisel Gelişim</li>
+          </ul>
         </div>
+
+        <div className="footer-col">
+          <h3 className="footer-title">Sayfalar</h3>
+          <ul className="footer-list">
+            <li>Ana Sayfa</li>
+            <li>Kurslar</li>
+            <li>Hakkımızda</li>
+            <li>İletişim</li>
+          </ul>
+        </div>
+
+        <div className="footer-col">
+          <h3 className="footer-title">İletişim</h3>
+          <ul className="footer-list">
+            <li className="footer-contact-item">
+              <Mail style={{ width: "16px", height: "16px" }} />
+              <span>info@learnify.com</span>
+            </li>
+
+            <li className="footer-contact-item">
+              <Phone style={{ width: "16px", height: "16px" }} />
+              <span>0212 000 00 00</span>
+            </li>
+
+            <li className="footer-contact-item">
+              <MapPin style={{ width: "16px", height: "16px" }} />
+              <span>İstanbul, Türkiye</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="footer-bottom">
+        <p>© 2026 Learnify. Tüm hakları saklıdır.</p>
       </div>
     </footer>
   );

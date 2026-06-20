@@ -1,29 +1,17 @@
+import { Compass } from "lucide-react";
+
 export default function SideBar() {
   return (
-    <aside className="sidebar">
-      <div className="sidebar-logo">
-        <h2>Learnify</h2>
-        <p>Modern Learning</p>
-      </div>
+    <aside className="sidebar-container">
+      <div style={{ padding: "20px" }}>
+        <h3>Kategoriler</h3>
 
-      <nav className="sidebar-nav">
-        <div className="sidebar-item sidebar-item-active">Dashboard</div>
-
-        <div className="sidebar-item">My Courses</div>
-
-        <div className="sidebar-item">Categories</div>
-
-        <div className="sidebar-item">Messages</div>
-
-        <div className="sidebar-item">Settings</div>
-      </nav>
-
-      <div className="sidebar-upgrade">
-        <h4>Pro Plan</h4>
-
-        <p>Unlock unlimited certificates and premium content.</p>
-
-        <button className="upgrade-btn">Upgrade to Pro</button>
+        <ul style={{ marginTop: "10px" }}>
+          <li>Yazılım</li>
+          <li>Tasarım</li>
+          <li>İşletme</li>
+          <li>Fotoğrafçılık</li>
+        </ul>
       </div>
     </aside>
   );
