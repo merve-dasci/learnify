@@ -1,16 +1,108 @@
-# React + Vite
+# 📚 Learnify - Online Eğitim Platformu
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Modern ve responsive bir online eğitim platformu. Yazılım, tasarım ve kişisel gelişim alanlarında kurslar sunmaktadır.
 
-Currently, two official plugins are available:
+## 🚀 Teknolojiler
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **React** 19.0.1 - UI framework
+- **Vite** 6.2.3 - Build tool
+- **CSS** (Custom Utilities + Tailwind) - Styling
+- **React Hook Form** - Form yönetimi
+- **Lucide React** - Icons
+- **Context API** - State management
 
-## React Compiler
+## ⚡ Hızlı Başlangıç
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Gereksinimler
+- Node.js 18+
+- npm veya yarn
 
-## Expanding the ESLint configuration
+### Kurulum
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+# Proje klasörüne git
+cd learnify-project
+
+# Bağımlılıkları yükle
+npm install
+
+# Dev server'ı başlat
+npm run dev
+```
+
+Dev server açılacak: `http://localhost:5173`
+
+### Build
+
+```bash
+npm run build
+```
+
+## 📁 Proje Yapısı
+
+```
+src/
+├── components/          # React bileşenleri
+│   ├── Header.jsx      # Hero section
+│   ├── Navbar.jsx      # Navigation (mobile responsive)
+│   ├── CourseCard.jsx  # Kurs kartı
+│   ├── CourseGrid.jsx  # Kurs grid listesi
+│   ├── CourseDetail.jsx # Kurs detayı
+│   ├── CategoriesList.jsx # Kategori listesi
+│   ├── LoginModal.jsx  # Login formu
+│   ├── AddCourseForm.jsx # Yeni kurs ekleme
+│   └── diğer...
+├── context/            # Context API
+│   ├── UserContext.jsx
+│   └── ThemeContext.jsx
+├── hooks/              # Custom hooks (gelecek)
+├── index.css          # Global styles
+├── App.jsx            # Main component
+└── main.jsx           # Entry point
+```
+
+## ✨ Özellikler
+
+✅ Responsive tasarım (mobile, tablet, desktop)  
+✅ Hamburger menu (mobil)  
+✅ Kurs listeleme ve filtreleme  
+✅ Kategori tabanlı görüntüleme  
+✅ Kurs ekleme/silme  
+✅ Arama fonksiyonu  
+✅ Login sistemi  
+✅ Modern UI/UX
+
+## 🎨 Renk Paleti
+
+- Primary (Mavi): `#4f46e5`
+- Secondary (Mor): `#7c3aed`
+- Emerald (Yeşil): `#10b981`
+- Rose (Kırmızı): `#f43f5e`
+
+## 📱 Responsive Breakpoints
+
+- **Desktop**: > 1024px
+- **Tablet**: 768px - 1024px
+- **Mobile**: < 768px
+- **Small Mobile**: < 480px
+
+## 🔒 Giriş Bilgileri (Demo)
+
+```
+Email: admin@learnify.com
+Şifre: 123456
+```
+
+⚠️ **Not**: Demo amaçlıdır. Production'da güvenli authentication kullanılmalıdır.
+
+## 🚧 Gelecek Özellikler
+
+- [ ] localStorage veri persistance
+- [ ] Custom hooks (useLocalStorage, useFetch)
+- [ ] Backend API entegrasyonu
+- [ ] TypeScript migration
+- [ ] Unit tests
+
+---
+
+**Son Güncelleme**: Haziran 2026

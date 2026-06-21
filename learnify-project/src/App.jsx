@@ -94,6 +94,7 @@ function AppContent() {
   return (
     <div className="app-container">
       <Navbar
+      view={view}
         setView={setView}
         searchInput={searchInput}
         setSearchInput={setSearchInput}

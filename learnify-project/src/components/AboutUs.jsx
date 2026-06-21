@@ -4,17 +4,17 @@ import { Award, Compass, BookOpen, Users, Code } from "lucide-react";
 export default function AboutUs() {
   const coreValues = [
     {
-      title: "Ergonomic Interface Systems",
+      title: "Uygulamalı Eğitimler",
       desc: "Our interfaces reject clutter. We curate custom visual components and grids with meticulous spacing ratios to facilitate focus and minimize mental workload.",
       icon: Compass,
     },
     {
-      title: "Production-Ready Pragmatism",
+      title: "Uzman Eğitmenler",
       desc: "We do not teach abstract theory in isolation. Every course maps directly to building verifiable components, enterprise code assets, or professional portfolios.",
       icon: Code,
     },
     {
-      title: "World-Class Mentor Network",
+      title: "Kariyer Odaklı İçerikler",
       desc: "We curate instructors who have actively operated as core architects, key researchers, or leading directors at prominent industry organizations.",
       icon: Users,
     },
@@ -47,7 +47,7 @@ export default function AboutUs() {
             className="text-3xl font-extrabold mt-4"
             style={{ margin: 0, letterSpacing: "-0.5px" }}
           >
-            Syllabus of Excellence
+            Learnify Hakkında
           </h1>
           <p
             className="text-base text-muted mt-4"
@@ -175,7 +175,7 @@ export default function AboutUs() {
                     marginBottom: "2px",
                   }}
                 >
-                  Active Scholars
+                  Aktif Öğrenci
                 </p>
                 <p
                   className="text-xs text-muted"
