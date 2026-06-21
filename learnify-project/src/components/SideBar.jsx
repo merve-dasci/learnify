@@ -1,17 +1,26 @@
-import { Compass } from "lucide-react";
-
-export default function SideBar() {
+export default function Sidebar({
+  categories,
+  selectedCategory,
+  onCategoryClick,
+}) {
   return (
     <aside className="sidebar-container">
-      <div style={{ padding: "20px" }}>
-        <h3>Kategoriler</h3>
+      <div className="chapter-card">
+        <h3 className="footer-title">Kategoriler</h3>
 
-        <ul style={{ marginTop: "10px" }}>
-          <li>Yazılım</li>
-          <li>Tasarım</li>
-          <li>İşletme</li>
-          <li>Fotoğrafçılık</li>
-        </ul>
+        <div className="flex flex-col gap-2">
+          {categories.map((category) => (
+            <button
+              key={category}
+              className={`dropdown-item ${
+                selectedCategory === category ? "nav-btn-active" : ""
+              }`}
+              onClick={() => onCategoryClick(category)}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
       </div>
     </aside>
   );

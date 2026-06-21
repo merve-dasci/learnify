@@ -1,6 +1,6 @@
 import { BookOpenCheck, Users, Award } from "lucide-react";
 
-export default function Header() {
+export default function Header({totalCourses, totalCategories}) {
   return (
     <section className="hero" id="learnify-header-banner">
       <div className="container hero-inner">
@@ -19,22 +19,41 @@ export default function Header() {
           seviyeye kadar farklı eğitimleri keşfedebilirsin.
         </p>
 
-        <div className="stats-grid" style={{ marginTop: "32px" }}>
+        <div className="hero-actions">
+          <button
+            className="btn btn-primary"
+            onClick={() => {
+              document
+                .getElementById("course-grid")
+                ?.scrollIntoView({ behavior: "smooth" });
+            }}
+          >
+            Kursları Keşfet
+          </button>
+        </div>
+
+        <div className="stats-grid">
           <div className="stat-cell">
-            <Users style={{ width: "22px", height: "22px" }} />
+            <div className="stat-icon-wrapper indigo">
+              <Users style={{ width: "24px", height: "24px" }} />
+            </div>
             <p className="stat-num">500+</p>
             <p className="stat-label">Öğrenci</p>
           </div>
 
           <div className="stat-cell">
-            <BookOpenCheck style={{ width: "22px", height: "22px" }} />
-            <p className="stat-num">20+</p>
+            <div className="stat-icon-wrapper violet">
+              <BookOpenCheck style={{ width: "24px", height: "24px" }} />
+            </div>
+            <p className="stat-num">{totalCourses}</p>
             <p className="stat-label">Kurs</p>
           </div>
 
           <div className="stat-cell">
-            <Award style={{ width: "22px", height: "22px" }} />
-            <p className="stat-num">3</p>
+            <div className="stat-icon-wrapper emerald">
+              <Award style={{ width: "24px", height: "24px" }} />
+            </div>
+            <p className="stat-num">{totalCategories}</p>
             <p className="stat-label">Kategori</p>
           </div>
         </div>

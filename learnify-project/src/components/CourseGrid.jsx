@@ -1,37 +1,40 @@
 import CourseCard from "./CourseCard";
 
-export default function CourseGrid({ courses }) {
+export default function CourseGrid({
+  title,
+  courses,
+  onSelectCourse,
+  onDeleteCourse,
+}) {
   return (
     <section
       className="container"
-      id="learnify-course-grid"
+      id="course-grid"
       style={{ padding: "48px 24px" }}
     >
-      <div>
-        <h2
-          className="text-xl font-extrabold"
-          style={{ margin: 0, color: "var(--text-main)" }}
-        >
-          Öne Çıkan Kurslar
-        </h2>
-
-        <p
-          className="text-xs text-muted"
-          style={{ fontWeight: 600, marginTop: "4px" }}
-        >
-          Learnify üzerinde yer alan bazı eğitimler
+      <div className="catalog-section-title">
+        <h2>{title}</h2>
+        <p className="text-xs text-muted">
+          Toplam {courses.length} kurs listelendi
         </p>
       </div>
 
-      <div
-        className="product-grid"
-        id="dashboard-catalog-grid"
-        style={{ marginTop: "32px" }}
-      >
-        {courses.map((course) => (
-          <CourseCard key={course.id} course={course} />
-        ))}
-      </div>
+      {courses.length === 0 ? (
+        <div className="no-results">
+          <p>Aradığınız kritere uygun kurs bulunamadı.</p>
+        </div>
+      ) : (
+        <div className="grid grid-cols-3 mt-8">
+          {courses.map((course) => (
+            <CourseCard
+              key={course.id}
+              course={course}
+              onSelectCourse={onSelectCourse}
+              onDeleteCourse={onDeleteCourse}
+            />
+          ))}
+        </div>
+      )}
     </section>
   );
 }

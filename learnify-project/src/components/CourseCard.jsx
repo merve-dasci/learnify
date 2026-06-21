@@ -1,8 +1,16 @@
 import { Clock, BookOpen } from "lucide-react";
+import { useContext } from "react";
+import { UserContext } from "../context/UserContext";
 
-export default function CourseCard({ course }) {
+export default function CourseCard({ course, onSelectCourse, onDeleteCourse }) {
+
+  const {user} = useContext(UserContext)
   return (
-    <div className="course-card" id={`course-card-${course.id}`}>
+    <div
+      className="course-card"
+      id={`course-card-${course.id}`}
+      onClick={() => onSelectCourse(course)}
+    >
       <div className="card-media">
         <img src={course.image} className="card-img" alt={course.title} />
 
@@ -16,11 +24,13 @@ export default function CourseCard({ course }) {
 
         <h3 className="card-title">{course.title}</h3>
 
-        <p className="card-instructor-name">{course.instructor}</p>
+        <div className="card-instructor">
+          <span className="card-instructor-name">
+            Eğitmen: {course.instructor}
+          </span>
+        </div>
 
-        <p className="text-xs text-muted" style={{ marginTop: "10px" }}>
-          {course.description}
-        </p>
+        <p className="text-xs text-muted mt-3">{course.description}</p>
 
         <div className="card-footer">
           <span className="card-price">{course.price} TL</span>
@@ -39,6 +49,18 @@ export default function CourseCard({ course }) {
             </div>
           </div>
         </div>
+
+        {user.isLoggedIn && (
+          <button
+            className="btn btn-outline btn-full mt-4"
+            onClick={(e) => {
+              e.stopPropagation();
+              onDeleteCourse(course.id);
+            }}
+          >
+            Kursu Sil
+          </button>
+        )}
       </div>
     </div>
   );
