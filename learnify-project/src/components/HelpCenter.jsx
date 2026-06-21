@@ -6,6 +6,7 @@ export default function HelpCenter() {
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
+  const [activeFaqId, setActiveFaqId] = useState(null)
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -19,6 +20,10 @@ export default function HelpCenter() {
     setName("");
     setMessage("");
     setError("");
+  };
+
+  const handleToggleFaq = (id) => {
+    setActiveFaqId(activeFaqId === id ? null : id);
   };
 
   return (
@@ -43,13 +48,20 @@ export default function HelpCenter() {
       <div className="faq-accordion-container">
         {faqs.map((faq) => (
           <div key={faq.id} className="faq-card">
-            <div className="faq-question-btn">
+            <button
+              type="button"
+              className="faq-question-btn"
+              onClick={() => handleToggleFaq(faq.id)}
+            >
               <h3>{faq.question}</h3>
-            </div>
+              <span>{activeFaqId === faq.id ? "−" : "+"}</span>
+            </button>
 
-            <div className="faq-answer-block">
-              <p>{faq.answer}</p>
-            </div>
+            {activeFaqId === faq.id && (
+              <div className="faq-answer-block">
+                <p>{faq.answer}</p>
+              </div>
+            )}
           </div>
         ))}
       </div>

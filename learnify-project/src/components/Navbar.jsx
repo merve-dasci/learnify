@@ -3,6 +3,7 @@ import { BookOpen, Search, Menu, X } from "lucide-react";
 import { UserContext } from "../context/UserContext";
 
 export default function Navbar({
+  view,
   setView,
   searchInput,
   setSearchInput,
@@ -55,7 +56,7 @@ export default function Navbar({
 
           <nav className="nav-links">
             <button
-              className="nav-btn"
+              className={`nav-btn ${view === "home" ? "nav-btn-active" : ""}`}
               onClick={() => {
                 setSelectedCategory("Tüm Kurslar");
                 setSearchQuery("");
@@ -67,22 +68,29 @@ export default function Navbar({
             </button>
 
             <button
-              className="nav-btn"
+              className={`nav-btn ${view === "categories" ? "nav-btn-active" : ""}`}
               onClick={() => handleNavClick("categories")}
             >
               Kategoriler
             </button>
 
-            <button className="nav-btn" onClick={() => handleNavClick("about")}>
+            <button
+              className={`nav-btn ${view === "about" ? "nav-btn-active" : ""}`}
+              onClick={() => handleNavClick("about")}
+            >
               Hakkımızda
             </button>
-
-            <button className="nav-btn" onClick={() => handleNavClick("help")}>
+            <button
+              className={`nav-btn ${view === "help" ? "nav-btn-active" : ""}`}
+              onClick={() => handleNavClick("help")}
+            >
               Yardım
             </button>
-
             {user.isLoggedIn && (
-              <button className="nav-btn" onClick={() => setView("addCourse")}>
+              <button
+                className={`nav-btn ${view === "addCourse" ? "nav-btn-active" : ""}`}
+                onClick={() => setView("addCourse")}
+              >
                 Kurs Ekle
               </button>
             )}
@@ -95,7 +103,7 @@ export default function Navbar({
                   <span className="user-name">{user.name}</span>
                 </div>
                 <button
-                  className="nav-btn"
+                  className={`nav-btn ${view === "myCourses" ? "nav-btn-active" : ""}`}
                   onClick={() => setView("myCourses")}
                 >
                   Kurslarım

@@ -19,11 +19,12 @@ export default function HomeProgress({ onSelectCourse }) {
 
       <div className="grid grid-cols-3 mt-8">
         {user.enrolledCourses.map((course) => {
-          const savedTime = localStorage.getItem(
-            `course-progress-${course.id}`,
+          const savedPercent = localStorage.getItem(
+            `course-progress-percent-${course.id}`,
           );
-          const progress = savedTime
-            ? Math.min(Math.floor(Number(savedTime)), 100)
+
+          const progress = savedPercent
+            ? Math.min(Math.floor(Number(savedPercent)), 100)
             : 0;
 
           return (

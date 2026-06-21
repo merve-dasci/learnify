@@ -4,50 +4,52 @@ import { UserContext } from "../context/UserContext";
 
 export default function CourseDetail({ course, onBack }) {
   if (!course) return null;
-  const {user, enrollCourse} = useContext(UserContext)
 
-  const isEnrolled = user.enrolledCourses.some((item) => item.id === course.id)
+  const { user, enrollCourse, removeCourse } = useContext(UserContext);
+
+  const isEnrolled = user.enrolledCourses.some((item) => item.id === course.id);
+
   const [progress, setProgress] = useState(0);
 
   const videoRef = useRef(null);
 
- useEffect(() => {
-   const video = videoRef.current;
-   if (!video) return;
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
 
-   const storageKey = `course-progress-${course.id}`;
-   const percentKey = `course-progress-percent-${course.id}`;
+    const storageKey = `course-progress-${course.id}`;
+    const percentKey = `course-progress-percent-${course.id}`;
 
-   const savedTime = localStorage.getItem(storageKey);
-   const savedPercent = localStorage.getItem(percentKey);
+    const savedTime = localStorage.getItem(storageKey);
+    const savedPercent = localStorage.getItem(percentKey);
 
-   if (savedTime) {
-     video.currentTime = Number(savedTime);
-   }
+    if (savedTime) {
+      video.currentTime = Number(savedTime);
+    }
 
-   if (savedPercent) {
-     setProgress(Number(savedPercent));
-   }
+    if (savedPercent) {
+      setProgress(Number(savedPercent));
+    }
 
-   const handleTimeUpdate = () => {
-     localStorage.setItem(storageKey, video.currentTime);
+    const handleTimeUpdate = () => {
+      localStorage.setItem(storageKey, video.currentTime);
 
-     if (video.duration) {
-       const watchedPercent = Math.floor(
-         (video.currentTime / video.duration) * 100,
-       );
+      if (video.duration) {
+        const watchedPercent = Math.floor(
+          (video.currentTime / video.duration) * 100,
+        );
 
-       setProgress(watchedPercent);
-       localStorage.setItem(percentKey, watchedPercent);
-     }
-   };
+        setProgress(watchedPercent);
+        localStorage.setItem(percentKey, watchedPercent);
+      }
+    };
 
-   video.addEventListener("timeupdate", handleTimeUpdate);
+    video.addEventListener("timeupdate", handleTimeUpdate);
 
-   return () => {
-     video.removeEventListener("timeupdate", handleTimeUpdate);
-   };
- }, [course.id]);
+    return () => {
+      video.removeEventListener("timeupdate", handleTimeUpdate);
+    };
+  }, [course.id]);
 
   return (
     <div className="container py-12">
@@ -68,6 +70,7 @@ export default function CourseDetail({ course, onBack }) {
               <source src={course.videoUrl} type="video/mp4" />
             </video>
           </div>
+
           <h1 className="text-2xl font-black mt-6">{course.title}</h1>
 
           <p className="text-muted mt-3">{course.description}</p>
@@ -108,22 +111,34 @@ export default function CourseDetail({ course, onBack }) {
             <div className="mt-6">
               <span className="card-price">{course.price} TL</span>
             </div>
-            <button
-              className="btn btn-primary btn-full mt-6"
-              onClick={() => {
-                if (!user.isLoggedIn) {
-                  alert("Kursa kayıt olmak için giriş yapmalısınız.");
-                  return;
-                }
 
-                if (!isEnrolled) {
+            {isEnrolled ? (
+              <button
+                className="btn btn-outline btn-full mt-6"
+                onClick={() => {
+                  removeCourse(course.id);
+                  alert("Kurstan ayrıldınız.");
+                }}
+              >
+                Kurstan Ayrıl
+              </button>
+            ) : (
+              <button
+                className="btn btn-primary btn-full mt-6"
+                onClick={() => {
+                  if (!user.isLoggedIn) {
+                    alert("Kursa kayıt olmak için giriş yapmalısınız.");
+                    return;
+                  }
+
                   enrollCourse(course);
                   alert("Kursa başarıyla kayıt oldunuz.");
-                }
-              }}
-            >
-              {isEnrolled ? "Kursa Devam Et" : "Kursa Başla"}
-            </button>
+                }}
+              >
+                Kursa Başla
+              </button>
+            )}
+
             <div className="mt-6">
               <h3 className="font-bold mb-3">Ders İçeriği</h3>
 

@@ -1,8 +1,7 @@
 import { useContext } from "react";
 import { UserContext } from "../context/UserContext";
-import CourseCard from "./CourseCard";
 
-export default function MyCourses({ onSelectCourse, onDeleteCourse }) {
+export default function MyCourses({ onSelectCourse }) {
   const { user } = useContext(UserContext);
 
   return (
@@ -22,7 +21,11 @@ export default function MyCourses({ onSelectCourse, onDeleteCourse }) {
       ) : (
         <div className="grid grid-cols-3 mt-8">
           {user.enrolledCourses.map((course) => (
-            <div key={course.id} className="course-card">
+            <div
+              key={course.id}
+              className="course-card"
+              onClick={() => onSelectCourse(course)}
+            >
               <div className="card-media">
                 <img
                   src={course.image}
@@ -44,7 +47,10 @@ export default function MyCourses({ onSelectCourse, onDeleteCourse }) {
 
                 <button
                   className="btn btn-primary btn-full mt-4"
-                  onClick={() => onSelectCourse(course)}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onSelectCourse(course);
+                  }}
                 >
                   Devam Et
                 </button>
